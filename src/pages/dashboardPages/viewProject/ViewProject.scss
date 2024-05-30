@@ -1,0 +1,70 @@
+#view-project{
+ .title{
+    font-size: 1.3rem;
+    font-weight: 600;
+ }
+ .container-text{
+    border-radius: 5px;
+    // background-image: linear-gradient(to right, #0756a529, #5cabfaad);
+    background-color: #e9e9e9;
+    .text{
+        font-size: 1rem;
+        // color: white;
+    text-align: end;
+    line-height: 45px;
+    font-weight: 600;
+    }
+
+ }
+ .img-project{
+    width: 350px;
+    border-radius: 5px;
+}
+.container-img-project{
+    .imgs-project{
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+.container-btn{
+    width: 100%;
+    .btn-units {
+        background-color: #0756a5;
+        color: white;
+        width: 650px;
+        height: 50px;
+        font-size: 1.3rem;
+      }
+      .btn-edit{
+        border: 1px solid #d6d0d0;
+        color: #0756a5;
+        width: 200px;
+        height: 50px;
+        font-size: 1.3rem;
+      }
+      .btn-delete{
+        border: 1px solid #d6d0d0;
+        color: #0756a5;
+        width: 200px;
+        height: 50px;
+        font-size: 1.3rem;
+      }
+      .btn-edit:hover{
+        border: none;
+        background-color: #0756a5;
+        color: white;
+        transition: 300ms ease;
+      }
+      .btn-delete:hover{
+        border: none;
+        background-color: #0756a5;
+        transition: 300ms ease;
+        color: white;
+
+      }
+}
+}

@@ -1,0 +1,153 @@
+.section-2-home {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left-about-us {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right-logo-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-image-section-2 {
+  width: 100%;
+}
+.our-info-text {
+  direction: rtl;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.head-text-section-2 {
+  color: #888888;
+  text-align: end;
+  font-weight: 600;
+  line-height: 60px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.your-choose {
+ 
+  color: #0756a5;
+}
+.desc-section-t {
+  max-width: 350px;
+  color: #888888;
+  text-align: end;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+.container-button {
+  width: 95%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns-section-2 {
+  background-color: transparent;
+  border: 1px solid #8b8b8b;
+  border-radius: 50px;
+  width: 200px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #8b8b8b;
+  border-color: #8b8b8b;
+  transition: 300ms ease;
+}
+
+.btns-section-2:hover {
+  background-color: #0756a5;
+  color: #ffffff;
+  transition: 300ms ease;
+}
+
+
+.counter-section {
+  height: 20vh;
+  background-color: #888888;
+}
+@media (max-width: 1200px) {
+  .btns-section-2 {
+    width: 160px;
+    height: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .section-2-home {
+    height: 60vh;
+  }
+  .our-info-text {
+    font-size: 1rem;
+  }
+  .head-text-section-2 {
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  .desc-section-t {
+    font-size: 0.7rem;
+    line-height: 17px;
+  }
+  .btns-section-2 {
+    width: 135px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+  .container-button {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .section-2-home {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-2-home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .left-about-us {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .right-logo-image {
+    width: 100%;
+  }
+  .container-button {
+    width: 75%;
+  }
+  .head-text-section-2 {
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 2rem;
+    max-width: 90%;
+    margin-bottom: 1.2rem;
+  }
+
+  .btns-section-2 {
+    width: 150px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 490px) {
+  .container-button {
+    width: 80%;
+  }
+}

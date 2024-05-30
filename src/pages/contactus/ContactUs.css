@@ -1,0 +1,39 @@
+.interface-section-contactus-page {
+  height: 25vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.title-contactus-page {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  padding-right: 70px;
+}
+.main-contactus-page {
+  height: 95vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  
+}
+@media (max-width: 992px) {
+    .contant-contactus {
+        width: 43%;
+   
+      }
+}
+@media (max-width: 767px) {
+    .main-contactus-page {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+      }}

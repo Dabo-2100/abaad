@@ -1,0 +1,9 @@
+.styles-sliderr {
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 1000px !important;
+  }
+  .slide-carosalll{
+    margin-bottom: 1rem;
+  }

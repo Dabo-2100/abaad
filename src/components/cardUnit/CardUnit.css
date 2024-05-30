@@ -1,0 +1,16 @@
+.head-price{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+@media (max-width: 992px) {
+    .card2-unit-page{
+        width: 45%;
+    }
+    
+}
+@media (max-width: 767px) {
+    .card2-unit-page{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,13 @@
+.container-Projects-sale{
+    height: auto;
+    margin-bottom: 3rem;
+}
+.container-projects-sale-page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

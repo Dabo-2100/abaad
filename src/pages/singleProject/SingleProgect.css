@@ -1,0 +1,8 @@
+.container-unis-project{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

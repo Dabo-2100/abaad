@@ -1,0 +1,42 @@
+#project-table {
+  .btn-add {
+    background-color: #0756a5;
+    color: white;
+    width: 350px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .table-style {
+    direction: rtl;
+    .img-project {
+      width: 200px;
+      height: 125px;
+      object-fit: cover;
+    }
+    .item-control {
+      width: 100px;
+      height: 2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 300ms ease;
+    }
+    .view:hover {
+      background-color: rgb(3, 152, 182) !important;
+      transition: 300ms ease;
+    }
+    .delete:hover {
+      background-color: rgb(140, 1, 15) !important;
+      transition: 300ms ease;
+    }
+    .edit:hover {
+      background-color: rgb(188, 141, 0) !important;
+      transition: 300ms ease;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.main-container-video-section{
+    width: 100%;
+    height: 80vh;
+    padding: 5rem 0px;
+    background-color: #F5F5F5;
+}
+.container-videoTest{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-video{
+    width: 500px;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container-video-text{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.video{
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+}
+.head-text-video{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #888888;
+    text-align: right;
+    line-height: 45px;
+}
+.desc-text-video{
+font-size: 1.1rem;
+text-align: right;
+color: #888888;
+line-height: 30px;
+}
+.container-item-text-video{
+width: 100%;
+height: 20%;
+display: flex;
+flex-direction: row-reverse;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+}
+.desc-text-video-item{
+    width: 50%;
+}
+@media (max-width: 1400px) {
+    .container-video-text{
+        width: 50%;
+    }
+}
+@media (max-width: 1200px) {
+    .container-video-text{
+        width: 45%;
+    }
+    .video{
+        border-radius: 10px;
+        width: 450px;
+        height: 360px;
+    }
+    .container-video-text {
+        height: 60vh;
+    }
+}
+@media (max-width: 992px) {
+    .main-container-video-section{
+        height: auto;
+    }
+    .container-videoTest{
+        /* width: 100%; */
+        flex-direction: column;
+    }
+    .container-video-text{
+        height: 80vh;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .video{
+        border-radius: 10px;
+        width: 100%;
+        height: 460px;
+    }
+    .container-video-text {
+        height: 55vh;
+    }
+}
+@media (max-width: 767px) {
+
+    .video{
+        border-radius: 10px;
+        width: 100%;
+        height: 400px;
+    }
+    .container-video-text {
+        height: 50vh;
+    }
+}
