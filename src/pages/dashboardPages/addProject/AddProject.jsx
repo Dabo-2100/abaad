@@ -27,7 +27,7 @@ export default function AddProject() {
           <label htmlFor="unit" className="form-label">
               صورة الغلاف
             </label>
-            <input className="form-control form-control-lg" id="formFileLg"  type="file"/>
+            <input class="form-control form-control-lg" id="formFileLg"  type="file"/>
           {/* <link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/>
           <label for="imageUpload" className="btn btn-primary btn-block btn-outlined btn-img">اختار صورة</label>
           <input type="file" id="imageUpload" accept="image/*" style={{display: 'none'}}/> */}
@@ -39,7 +39,7 @@ export default function AddProject() {
           <label htmlFor="unit" className="form-label">
               صور المشروع 
             </label>
-            <input className="form-control form-control-lg" id="formFileLg" multiple type="file"/>
+            <input class="form-control form-control-lg" id="formFileLg" multiple type="file"/>
           </div>
 
 

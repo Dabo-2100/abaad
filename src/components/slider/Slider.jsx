@@ -2,25 +2,29 @@ import noImg from "../../assats/noImgPro.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { useRecoilState } from "recoil";
 import { $ServerUrl } from "../../store";
 import "./Slider.css";
-import 'swiper/css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import "swiper/css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 export default function Slider() {
   const [serverUrl] = useRecoilState($ServerUrl);
-  let [projects, setProjects] = useState([]);
-  const params = useParams()
+  const [projects, setProjects] = useState([]);
+
   function getAllProjects() {
-    let Token = sessionStorage.getItem("user_token");
-    let server = `${serverUrl}/index.php/api/projects`;
+    let server = `${serverUrl}/projects`;
     axios
-      .get(server).then((res) => {
+      .get(server, {
+        params: {
+          populate: "*",
+        },
+      })
+      .then((res) => {
         setProjects(res.data.data);
       })
       .catch((err) => {
@@ -45,17 +49,15 @@ export default function Slider() {
   return (
     <>
       <div className="container-slider-projects-home ">
-
         <div className="swiper-button-next"></div>
-
         <Swiper
           className="container"
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           slidesPerView={3}
           loop={true}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           breakpoints={{
             1200: {
@@ -74,20 +76,34 @@ export default function Slider() {
               slidesPerView: 1,
               spaceBetween: 50,
             },
-
           }}
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <Link to={`/project/${project.project_id}`}>
+              <Link to={`/project/${project.id}`}>
                 <div className="wrapper-slide-item">
                   <img
-                    src={project.project_cover_name ? `${serverUrl}/media/projects/${project.project_id}/${project.project_cover_name}` : noImg}
+                    src={
+                      project.attributes.cover_photo.data
+                        ? `${
+                            serverUrl.includes("localhost")
+                              ? serverUrl.split("/api")[0] +
+                                project.attributes.cover_photo.data.attributes
+                                  .url
+                              : project.attributes.cover_photo.data.attributes
+                                  .url
+                          }`
+                        : noImg
+                    }
                     alt="project image"
                     className="project-image-card2 ssssss"
                   />
-                  <h1 className="title-project-card2 ttitle-project-card2">{project.project_name}</h1>
-                  <p className="color-text ccolor-text">{project.project_slogan}</p>
+                  <h1 className="title-project-card2 ttitle-project-card2">
+                    {project.attributes.project_name}
+                  </h1>
+                  <p className="color-text ccolor-text">
+                    {project.attributes.project_slogan}
+                  </p>
                 </div>
               </Link>
             </SwiperSlide>

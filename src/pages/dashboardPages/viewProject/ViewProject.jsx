@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import "./ViewProject.scss";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { $ServerUrl } from "../../../store";
 export default function ViewProject() {
   const projectId = window.location.pathname.split("/").slice(-1)[0];
   const params = useParams();
-  const [serverUrl] = useRecoilState($ServerUrl);
+  const [serverUrl] = useState("https://easetasks.com/abaad");
+
   const [project, setProject] = useState([]);
   function getAllProjects() {
     let Token = sessionStorage.getItem("user_token");
@@ -33,9 +32,9 @@ export default function ViewProject() {
   }, []);
   return (
     <>
-      {project.map((project, index) => (
+      {project.map((project , index) => (
         <div
-          key={index}
+        key={index}
           id="view-project"
           className="container d-flex align-items-end flex-column mt-5 mb-5"
         >

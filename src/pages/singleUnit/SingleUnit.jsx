@@ -1,19 +1,44 @@
+import axios from "axios";
 import "./SingleUnit.css";
 import SliderProject from "../../components/sliderProject/SliderProject";
 import bac from "../../assats/bac.png";
 import FormContactUs from "../../components/formCntactUs/FormContactUs";
 import { useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { $ServerUrl } from "../../store";
+import { useParams } from "react-router-dom";
+
 export default function SingleUnit(props) {
+  const [serverUrl] = useRecoilState($ServerUrl);
+  const parms = useParams();
+  const unitId = parms.unitId;
+
   function scrollToTop() {
     window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Smooth scrolling animation
+      top: 0,
+      behavior: "smooth", // Smooth scrolling animation
     });
   }
-  
-  
   useEffect(() => {
     scrollToTop();
+    let server = `${serverUrl}/units/${unitId}`;
+    axios
+      .get(server, {
+        params: {
+          populate: {
+            unit_features: {
+              populate: "*",
+            },
+          },
+        },
+      })
+      .then((res) => {
+        console.log(res.data.data);
+        // setUnits(res.data.data.attributes.project_units.data);
+      })
+      .catch((err) => {
+        // console.log(err);
+      });
   }, []);
   return (
     <>
@@ -43,7 +68,7 @@ export default function SingleUnit(props) {
         </div>
       </div>
       <div className="container">
-        <SliderProject stylingSlider={true} />
+        <SliderProject imgs={null} stylingSlider={true} />
       </div>
       <div className="brief-unit container">
         <div className="container-details-project container-details-unit">
@@ -105,7 +130,11 @@ export default function SingleUnit(props) {
         className="container-form-unit-page container"
         style={{ backgroundImage: `url(${bac})`, backgroundSize: "cover" }}
       >
-        <FormContactUs stylingFontForm={true} styleInputs={true} stylebutton={true}/>
+        <FormContactUs
+          stylingFontForm={true}
+          styleInputs={true}
+          stylebutton={true}
+        />
       </div>
     </>
   );
