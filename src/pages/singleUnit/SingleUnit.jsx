@@ -44,7 +44,7 @@ export default function SingleUnit(props) {
     <>
       <div className="header-single-page container">
         <div className="left-header-unit-page">
-          <h1 className="unit-title">وحدة 5 - فيلا</h1>
+          <h1 className="unit-title">{unit.unit_name}</h1>
           <div className="control-units">
             <button className="btn-control-unit next">
               <i className="bi bi-arrow-left-circle-fill icon-arrow-previous"></i>
